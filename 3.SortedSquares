@@ -1,0 +1,18 @@
+#question 3
+def sorted_squares(nums):
+    squared_nums = [num * num for num in nums]  # Square each number
+    #squared_nums = [num**2 for num in nums]
+
+    squared_nums.sort()  # Sort the squared numbers in non-decreasing order
+    
+    return squared_nums
+
+
+# Example usage:
+nums = [-4, -1, 0, 3, 10]
+
+result = sorted_squares(nums)
+print(result)
+
+#TC - O(nlogn)----sorting
+#SC - O(n)
