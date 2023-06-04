@@ -1,0 +1,17 @@
+#question 2
+def arrange_coins(n):
+    i = 1  # Start with the first row
+    while n >= i:
+        n -= i
+        i += 1
+
+    return i - 1
+
+# Example usage:
+n = 5
+
+result = arrange_coins(n)
+print(result)
+
+#TC - O(sqrt(n))  ------when n = 9, sqrt(n)=3 ie the loop runs for 3 iterations (1, 2, 3).here n=5 so sqrt(5) = 2 so output here is 2
+#SC - O(1)
