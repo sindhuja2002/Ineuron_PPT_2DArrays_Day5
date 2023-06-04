@@ -1,0 +1,24 @@
+#question 7
+def findMin(nums):
+    left = 0
+    right = len(nums) - 1
+
+    while left < right:
+        mid = left + (right - left) // 2
+
+        # Check if the mid element is greater than the rightmost element
+        if nums[mid] > nums[right]:
+            left = mid + 1
+        else:
+            right = mid
+
+    # At the end, left and right will point to the minimum element
+    return nums[left]
+
+# Example usage:
+nums = [3, 4, 5, 1, 2]
+result = findMin(nums)
+print(result)
+
+#TC - O(logn)--------Binary Search
+#SC - O(1)
