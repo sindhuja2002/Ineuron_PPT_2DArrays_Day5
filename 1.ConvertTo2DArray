@@ -1,0 +1,20 @@
+#question 1
+def convert_to_2d_array(original, m, n):
+    if m * n != len(original):
+        return []  # Return an empty 2D array if it is impossible
+
+    result = []
+    for i in range(0, len(original), n):
+        result.append(original[i:i + n])
+
+    return result
+
+# Example usage:
+original = [1, 2, 3, 4]
+m = 2
+n = 2
+result = convert_to_2d_array(original, m, n)
+print(result)
+
+#TC - O(m*n)
+#SC - O(m+n)
